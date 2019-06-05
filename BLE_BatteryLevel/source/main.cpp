@@ -147,6 +147,7 @@ void schedule_ble_events(BLE::OnEventsToProcessCallbackContext *context) {
 
 int main()
 {
+	wait_ms(1000); // enough time for serial data to gather after reset
     BLE &ble = BLE::Instance();
     ble.onEventsToProcess(schedule_ble_events);
 
